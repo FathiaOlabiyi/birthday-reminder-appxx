@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    position: relative;
+}
+
+.header {
+    font-family: 'Times New Roman';
+    font-size: 40px;
+    font-weight: 700;
+    color: purple;
+}
+
+.header_two{
+    font-weight: 500;
+    position: absolute;
+    font-weight: 600;
+    top: 19%;
+    right: 58%;
+    font-family: 'Times New Roman';
+    color: purple
+}
+
+form{
+    margin-top: 100px;
+    background-color: purple;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+label{
+    margin-left: 10px;
+    color: white;
+}
+
+input {
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color: #eee;
+    font-size: 15px;
+}
+
+button{
+    width: 100px;
+    font-size: 16px;
+    font-weight: 550;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    position: absolute;
+    bottom: 15%;
+    right: 3%;
+    background-color: #eee;
+    color: purple
+}
+
+.messages {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+#error {
+    color: red;
+}
+
+#success {
+    color: rgb(0, 193, 0);
+}
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Birthday Reminder App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="header">Birthday Reminder App</h1>
+            <h2 class="header_two">Register</h2>
+            <form action="/user/register" class="info" method="POST">
+                <label>Username:</label>
+                <input type="text" name="username" class="username" required>
+                <label>Email:</label>
+                <input type="email" name="email" class="email" required>
+                <label>Date of Birth:</label>
+                <input type="date" name="dob" class="dob" min="1900-01-01" max="2025-12-31" required>
+
+                <!-- error message -->
+                <% if(error) { %>
+                    <p class="messages" id="error"><%= error %></p>
+                <% } %>
+
+                <!-- success message -->
+                <% if(success) { %>
+                    <p class="messages" id="success"><%= success %></p>
+                <% } %>
+                <button type="submit" class="register">Register</button>
+            </form>
+        </div>
+        <script>
+            const errorMessage = document.getElementById("error");
+            const successMessage = document.getElementById("success");
+
+            setTimeout(() => {
+                if(errorMessage){
+                    errorMessage.innerHTML = ""
+                }
+                if(successMessage){
+                    successMessage.innerHTML = ""
+                }
+            }, 3000);
+        </script>
+    </body>
+</html>
