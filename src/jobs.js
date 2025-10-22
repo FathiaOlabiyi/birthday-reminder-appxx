@@ -51,7 +51,7 @@ const fetchBirthdays = async(req, res) => {
     }
 };
 
-node_cron.schedule("0 23 * * *", () => { 
+node_cron.schedule("0 7 * * *", () => { 
     fetchBirthdays()
 }, {timezone: "Africa/Lagos"});
 
