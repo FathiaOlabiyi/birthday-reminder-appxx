@@ -14,7 +14,7 @@ database.connectToDb();
 
 app.set("view engine", "ejs");
 
-
+app.get("/", (req, res) => res.redirect("/user/register"));
 app.get("/user/register", (req, res) => {
   res.render("index", { error: null, success: null });
 });
